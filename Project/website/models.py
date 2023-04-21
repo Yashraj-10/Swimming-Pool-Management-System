@@ -1,6 +1,4 @@
 from pkg_resources import Requirement
-
-# from website.views import membership
 from . import db
 from flask_login import UserMixin
 from sqlalchemy.sql import func
@@ -9,7 +7,6 @@ UserCourse = db.Table('user_course', db.Column('id', db.Integer, primary_key=Tru
     'user_id', db.Integer, db.ForeignKey('user.id')), db.Column('course_id', db.Integer, db.ForeignKey('course.id')))
 UserCompetition = db.Table('user_competition', db.Column('id', db.Integer, primary_key=True), db.Column(
     'user_id', db.Integer, db.ForeignKey('user.id')), db.Column('competition_id', db.Integer, db.ForeignKey('competition.id')))
-
 
 class Note(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -37,7 +34,6 @@ class User(db.Model, UserMixin):
     def __repr__(self) -> str:
         return f"User('{self.name}', '{self.email}')"
 
-
 class Post(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
@@ -50,7 +46,6 @@ class Post(db.Model):
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
 
-
 class Ticket(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     price = db.Column(db.Float)
@@ -58,7 +53,6 @@ class Ticket(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     def __repr__(self) -> str:
         return f"Ticket('{self.price}', '{self.competitionId}', '{self.user_id}')"
-
 
 class Competition(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -72,7 +66,6 @@ class Competition(db.Model):
 
     def __repr__(self):
         return f"Competition('{self.name}', '{self.date}')"
-
 
 class Course(db.Model):
     id = db.Column(db.Integer, primary_key=True,
@@ -89,7 +82,6 @@ class Course(db.Model):
 
     def __repr__(self):
         return f"Courses('{self.name}', '{self.date}', '{self.duration}', '{self.requirements}')"
-
 
 class Payment(db.Model):
     id = db.Column(db.Integer, primary_key=True,
