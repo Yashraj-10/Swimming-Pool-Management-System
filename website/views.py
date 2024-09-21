@@ -1,9 +1,7 @@
 
 from flask import Blueprint, render_template, request, redirect, url_for, flash, session
 from flask_login import login_user, logout_user, login_required, current_user
-from pkg_resources import Requirement
-from urllib3 import PoolManager
-from . import db,addAdmin
+from . import db, addAdmin
 from .models import User, Competition, Post, Ticket, Course
 from werkzeug.security import generate_password_hash, check_password_hash
 

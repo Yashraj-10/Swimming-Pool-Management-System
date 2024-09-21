@@ -31,17 +31,9 @@
 
   <!-- Template Main CSS File -->
   <link href="static/css/dashboard.css" rel="stylesheet">
-
-
 </head>
 
 <body>
-
-
-
-
-
-
   {% with messages = get_flashed_messages(with_categories=true) %} {% if
   messages %} {% for category, message in messages %} {% if category ==
   'error' %}
@@ -59,10 +51,6 @@
     </button>
   </div>
   {% endif %} {% endfor %} {% endif %} {% endwith %}
-
-
-
-
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
 
@@ -70,8 +58,6 @@
       <span><a class="logo me-auto m-1 "><img
             src="https://w7.pngwing.com/pngs/802/536/png-transparent-hua-hin-district-resort-lataguri-logo-others-miscellaneous-food-swimming-pool.png"></a></span>
       <h1 style="color:#1977CC" class="logo me-auto m-0"><a href="index.html">Aqualand Swimming Pool</a></h1>
-
-
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -89,7 +75,6 @@
           </li>
           <li class="dropdown"><a href="#"><span>Social</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              
               <li>
                 <li class="dropdown"><a href="#"><span>Post</span> <i class="bi bi-chevron-down"></i></a>
                   <ul>
@@ -97,12 +82,8 @@
                     <li><a href="/userpost">Viewpost</a></li>
       
                   </ul>
-                
-                
-                
                 </li>
               <li><a href="/usernotice">Notices</a></li>
-
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="/usernotification">Notifications</a></li>
@@ -172,9 +153,6 @@
 
       </div>
     </section><!-- End Why Us Section -->
-
-
-
 
     <!-- Vendor JS Files -->
     <script src="static/vendor/purecounter/purecounter.js"></script>
